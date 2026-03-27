@@ -3,6 +3,7 @@ import { CompositionProps } from "./constants";
 
 export const RenderRequest = z.object({
   id: z.string(),
+  compositionId: z.string().optional(),
   inputProps: CompositionProps,
 });
 

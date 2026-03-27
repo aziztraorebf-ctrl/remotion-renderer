@@ -56,7 +56,7 @@ export async function POST(req: Request) {
 
       const { sandboxFilePath, contentType } = await renderMediaOnVercel({
         sandbox,
-        compositionId: COMP_NAME,
+        compositionId: body.compositionId ?? COMP_NAME,
         inputProps: body.inputProps,
         onProgress: async (update) => {
           switch (update.stage) {
